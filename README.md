@@ -22,10 +22,10 @@ This project is an Express application using Sequelize ORM with MySQL for managi
 2. **Initialize a new Node.js project:**
    ```bash
    npm init -y
-3.  **Install required dependencies:**
+3. **Install required dependencies:**
    ```bash
    npm install express sequelize sequelize-cli mysql2 body-parser dotenv
-4.  **Initialize Sequelize:**
+4. **Initialize Sequelize:**
    ```bash
    npx sequelize-cli init
 
