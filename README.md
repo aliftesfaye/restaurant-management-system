@@ -35,7 +35,65 @@ This project is an Express application using Sequelize ORM with MySQL for managi
 
 Create a file named .env in the root of your project to store sensitive database credentials.
 
+```javascript
+DB_USER=your_username
+DB_PASSWORD=your_password
+DB_NAME=your_database_name
+DB_HOST=your_database_host
+DB_DIALECT=your_database_dialect
+```
+
 2. **Update Sequelize configuration:**
+
+Modify config/config.js to use the environment variables from the .env file.
+
+```javascript
+require('dotenv').config();
+
+module.exports = {
+  development: {
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT,
+  },
+  test: {
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT,
+  },
+  production: {
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT,
+  },
+};
+```
+
+
+3. **Update .sequelizerc configuration:**
+
+Create or update .sequelizerc to specify paths for models, migrations, and seeders.
+
+```javascript
+const path = require('path');
+
+module.exports = {
+  'models-path': path.resolve('models'),
+  'migrations-path': path.resolve('migrations'),
+  'seeders-path': path.resolve('seeders'),
+  'config': path.resolve('config/config.js'),
+};
+```
+
+
+
+
 
 
 
