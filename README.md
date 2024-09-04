@@ -22,16 +22,20 @@ This project is an Express application using Sequelize ORM with MySQL for managi
 2. **Initialize a new Node.js project:**
    ```bash
    npm init -y
-3. **Install required dependencies:**
-   ```bash
-   npm install express sequelize sequelize-cli mysql2 body-parser dotenv
-4. **Initialize Sequelize:**
-   ```bash
-   npx sequelize-cli init
 
 ## Installation
 
-1. **Create a .env file:**
+1. **Install required dependencies:**
+   ```bash
+   npm install express sequelize sequelize-cli mysql2 body-parser dotenv
+
+## Configuration
+
+1. **Initialize Sequelize:**
+   ```bash
+   npx sequelize-cli init
+
+2. **Create a .env file:**
 
 Create a file named .env in the root of your project to store sensitive database credentials.
 
@@ -43,7 +47,7 @@ DB_HOST=your_database_host
 DB_DIALECT=your_database_dialect
 ```
 
-2. **Update Sequelize configuration:**
+3. **Update Sequelize configuration:**
 
 Modify config/config.js to use the environment variables from the .env file.
 
@@ -76,7 +80,7 @@ module.exports = {
 ```
 
 
-3. **Update .sequelizerc configuration:**
+4. **Update .sequelizerc configuration:**
 
 Create or update .sequelizerc to specify paths for models, migrations, and seeders.
 
@@ -90,6 +94,27 @@ module.exports = {
   'config': path.resolve('config/config.js'),
 };
 ```
+
+# Commands
+
+Sequelize Commands
+
+1. **Generate a new migration:**
+
+```bash
+npx sequelize-cli migration:generate --name <migration-name>
+
+npx sequelize-cli migration:generate --name create-customers
+npx sequelize-cli migration:generate --name create-tables
+npx sequelize-cli migration:generate --name create-orders
+npx sequelize-cli migration:generate --name create-menu-items
+npx sequelize-cli migration:generate --name create-order-items
+npx sequelize-cli migration:generate --name create-employees
+npx sequelize-cli migration:generate --name create-employee-orders
+npx sequelize-cli migration:generate --name create-shifts
+npx sequelize-cli migration:generate --name create-employee-shifts
+```
+
 
 
 
