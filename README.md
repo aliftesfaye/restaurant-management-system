@@ -25,4 +25,17 @@ This project is an Express application using Sequelize ORM with MySQL for managi
 3.  **Install required dependencies:**
    ```bash
    npm install express sequelize sequelize-cli mysql2 body-parser dotenv
+4.  **Initialize Sequelize:**
+   ```bash
+   npx sequelize-cli init
+
+## Installation
+
+1. **Create a .env file:**
+
+Create a file named .env in the root of your project to store sensitive database credentials.
+
+2. **Update Sequelize configuration:**
+
+
 
