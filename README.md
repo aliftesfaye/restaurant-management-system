@@ -80,21 +80,6 @@ module.exports = {
 ```
 
 
-4. **Update .sequelizerc configuration:**
-
-Create or update .sequelizerc to specify paths for models, migrations, and seeders.
-
-```javascript
-const path = require('path');
-
-module.exports = {
-  'models-path': path.resolve('models'),
-  'migrations-path': path.resolve('migrations'),
-  'seeders-path': path.resolve('seeders'),
-  'config': path.resolve('config/config.js'),
-};
-```
-
 # Commands
 
 Sequelize Commands
