@@ -33,6 +33,9 @@ module.exports = (sequelize) => {
     {
       sequelize,
       modelName: "MenuItem",
+      timestamps: true,
+      createdAt: "createdAt",
+      updatedAt: "updatedAt",
     }
   );
 

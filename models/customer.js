@@ -34,6 +34,9 @@ module.exports = (sequelize) => {
     {
       sequelize,
       modelName: "Customer",
+      timestamps: true,
+      createdAt: "createdAt",
+      updatedAt: "updatedAt",
     }
   );
 
