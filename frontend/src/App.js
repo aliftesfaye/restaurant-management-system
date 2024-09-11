@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+
+import React from "react";
+import "./App.css";
+// import MainComponent from "./components/MainComponent"; // Updated import statement
+import Navbar from "./components/Navbar";
+// import RestaurantOrders from "./components/RestaurantOrders"; // Import RestaurantOrders
+import NoOrder from "./components/NoOrder";
+// import PayableAmount from "./components/PayableAmount";
+import MainComponent1 from "./components/MainComponent1";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex flex-col h-screen">
+      <div className="flex flex-1">
+        <Sidebar />
+        <div className="flex-1 ml-32 flex flex-col">
+          <Navbar />
+          <main className="flex-1 flex">
+            {/* Left Component (Main Component) */}
+            {/* <MainComponent /> */}
+            <MainComponent1 />
+
+            {/* Right Component (Restaurant Orders) */}
+            <div className="w-1/3 p-4">
+              {/* <RestaurantOrders /> */}
+              <NoOrder />
+              {/* <PayableAmount /> */}
+            </div>
+          </main>
+        </div>
+      </div>
     </div>
   );
 }
