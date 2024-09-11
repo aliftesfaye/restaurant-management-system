@@ -5,6 +5,12 @@ const { v4: uuidv4 } = require("uuid");
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable("EmployeeShifts", {
+      ID: {
+        type: DataTypes.UUID,
+        defaultValue: uuidv4(),
+        primaryKey: true,
+        allowNull: false,
+      },
       EmployeeID: {
         type: DataTypes.UUID,
         references: {
