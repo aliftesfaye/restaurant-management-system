@@ -26,7 +26,7 @@ const MainComponent1 = () => {
     setGuestCount((prev) => (prev > 0 ? prev - 1 : 0));
 
   return (
-    <div className="p-6 flex-1 min-h-screen">
+    <div className="p-6 flex-1 ">
       {/* Main Content */}
       <div className="flex-1 p-6">
         {/* Header Section */}
@@ -46,9 +46,7 @@ const MainComponent1 = () => {
         </div>
 
         {/* Table Cards Section */}
-        <div className="h-96 overflow-y-auto">
-          {" "}
-          {/* Fixed height and scrollable */}
+        <div className="h-96 overflow-y-auto scrollbar-hidden">
           <div className="flex flex-wrap justify-around">
             {tables.map((table) => (
               <a
@@ -56,26 +54,39 @@ const MainComponent1 = () => {
                 href={table.link}
                 className="bg-white p-6 rounded-lg m-2 w-60 flex flex-col items-center text-center no-underline transition-transform transform hover:scale-105 border border-gray-300"
               >
-                <FaChair className="text-gray-500 mb-3 text-4xl" />
+                <img
+                  src="/chair.png"
+                  alt="Table with Chairs"
+                  className="text-gray-500 mb-3 text-4xl"
+                />
                 <p className="text-lg font-semibold">{table.name}</p>
               </a>
             ))}
           </div>
         </div>
+        <style jsx>{`
+          .scrollbar-hidden::-webkit-scrollbar {
+            display: none;
+          }
+          .scrollbar-hidden {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+          }
+        `}</style>
       </div>
 
       {/* Footer Section */}
-      <div className="border-t border-dotted border-gray-400 bg-white px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-4">
+      <div className="border-t border-dashed border-gray-400 bg-white px-6 py-1 flex items-center justify-between">
+        <div className="flex items-center space-x-4 mt-3">
           <div className="flex items-center space-x-2">
             <FaChair className="text-gray-500 text-xl" />
-            <span className="font-bold text-lg">TABLE:</span>
+            <span className="text-sm">TABLE:</span>
             <span className="ml-2 text-lg">1</span>{" "}
             {/* Replace with dynamic value if needed */}
           </div>
           <div className="flex items-center space-x-2">
             <FaUser className="text-gray-500 text-xl" />
-            <span className="font-bold text-lg">GUEST:</span>
+            <span className=" text-sm">GUEST:</span>
             <div className="flex items-center space-x-2 ml-2">
               <button
                 onClick={decreaseGuests}
@@ -83,7 +94,7 @@ const MainComponent1 = () => {
               >
                 <FaMinus className="text-gray-600" />
               </button>
-              <span className="text-lg">{guestCount}</span>
+              <span className="text-sm">{guestCount}</span>
               <button
                 onClick={increaseGuests}
                 className="bg-gray-200 p-1 rounded-full hover:bg-gray-300 focus:outline-none"
@@ -93,8 +104,8 @@ const MainComponent1 = () => {
             </div>
           </div>
         </div>
-        <button className="bg-green-500 text-white py-3 px-6 rounded-lg text-lg font-bold">
-          Select and Continue
+        <button className="bg-green-500 text-white py-3 px-16 mt-3 rounded-lg text-lg font-bold">
+          Continue
         </button>
       </div>
     </div>

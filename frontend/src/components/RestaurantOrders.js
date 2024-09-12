@@ -79,7 +79,7 @@ const RestaurantOrders = () => {
         {/* Orders Section */}
         <div className="flex items-center justify-between text-xl mb-4">
           <span className="text-2xl uppercase">Order #</span>
-          <span className="text-2xl uppercase">Order Number</span>
+          <span className="text-2xl uppercase">12455554</span>
         </div>
 
         {/* Guests and Table Section */}
@@ -105,7 +105,7 @@ const RestaurantOrders = () => {
       <div className="border-b border-dotted border-gray-300 mt-4"></div>
 
       {/* Scrollable Menu Items List */}
-      <div className="mt-4 max-h-40 overflow-y-auto">
+      <div className="mt-4 max-h-64 overflow-y-auto scrollbar-hidden">
         {menuItems.map((item, index) => (
           <div
             key={index}
@@ -147,17 +147,26 @@ const RestaurantOrders = () => {
             </div>
           </div>
         ))}
+        <style jsx>{`
+          .scrollbar-hidden::-webkit-scrollbar {
+            display: none;
+          }
+          .scrollbar-hidden {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+          }
+        `}</style>
       </div>
 
       {/* Summary Section */}
       <div className="mt-6 p-6 border border-dotted border-gray-300 rounded-lg">
         <div className="flex justify-between text-lg mb-2">
-          <span className="text-lg uppercase">Subtotal</span>
-          <span className="text-lg">{`$${subtotal}`}</span>
+          <span className="text-xs uppercase">Subtotal</span>
+          <span className="text-xs">{`$${subtotal}`}</span>
         </div>
         <div className="flex justify-between text-lg mb-2">
-          <span className="text-lg uppercase">Service Charge 10%</span>
-          <span className="text-lg">{`$${serviceCharge}`}</span>
+          <span className="text-xs uppercase">Service Charge 10%</span>
+          <span className="text-xs">{`$${serviceCharge}`}</span>
         </div>
         {/* Dotted Line with Wide Gap */}
         <div className="border-b border-dotted border-gray-300 my-4"></div>

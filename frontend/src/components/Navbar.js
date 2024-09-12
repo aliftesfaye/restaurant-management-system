@@ -18,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-gray-800 text-white p-4 flex items-center justify-between">
+    <nav className=" text-gray-500 p-4 flex items-center justify-between">
       {/* Left Section (Title and Search Bar) */}
       <div className="flex items-center space-x-6">
         {/* Title */}
@@ -29,7 +29,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="pl-10 pr-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 w-64 md:w-80 lg:w-96"
+            className="pl-10 pr-4 py-2 rounded-md  text-gray-600 border border-gray-300 w-64 md:w-80 lg:w-96"
           />
           <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
         </div>
@@ -47,16 +47,16 @@ const Navbar = () => {
       {/* Buttons (Right Side) */}
       <div className="flex items-center space-x-4">
         {/* Add Table Button */}
-        <button className="flex items-center px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-          <div className="flex items-center justify-center w-6 h-6 border-2 border-white rounded-full">
+        <button className="flex items-center px-4 py-2 border border-gray-400  text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+          <div className="flex items-center justify-center w-6 h-6 border-2 border-gray-400 rounded-full">
             <FaPlus className="text-l" />
           </div>
           <span className="ml-2 text-lg">Add Table</span>
         </button>
 
         {/* Add Menu Button */}
-        <button className="flex items-center px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-          <div className="flex items-center justify-center w-6 h-6 border-2 border-white rounded-full">
+        <button className="flex items-center px-4 py-2 border border-gray-400 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+          <div className="flex items-center justify-center w-6 h-6 border-2 border-gray-500 rounded-full">
             <FaPlus className="text-l" />
           </div>
           <span className="ml-2 text-lg">Add Menu</span>
