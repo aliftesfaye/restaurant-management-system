@@ -40,7 +40,7 @@ const NoOrder = () => {
       <div className="flex flex-col items-center justify-center h-full text-center">
         <FaExclamationCircle className="text-6xl text-gray-400 mb-4" />
         <span className="text-xl font-semibold uppercase">
-          No Products at the Moment
+          No Item Selected at the Moment
         </span>
       </div>
     </div>

@@ -7,8 +7,8 @@ import Navbar from "./components/Navbar";
 // import RestaurantOrders from "./components/RestaurantOrders"; // Import RestaurantOrders
 import NoOrder from "./components/NoOrder";
 // import PayableAmount from "./components/PayableAmount";
-// import MainComponent1 from "./components/MainComponent1";
-import MainComponent2 from "./components/MainComponent2";
+import MainComponent1 from "./components/MainComponent1";
+// import MainComponent2 from "./components/MainComponent2";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
           <main className="flex-1 flex">
             {/* Left Component (Main Component) */}
             {/* <MainComponent /> */}
-            {/* <MainComponent1 /> */}
-            <MainComponent2 />
+            <MainComponent1 />
+            {/* <MainComponent2 /> */}
 
             {/* Right Component (Restaurant Orders) */}
             <div className="w-1/3 pb-4 pr-4 pl-4">
